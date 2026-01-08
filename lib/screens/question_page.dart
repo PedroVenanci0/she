@@ -49,19 +49,11 @@ class _QuestionPageState extends State<QuestionPage> with SingleTickerProviderSt
   void initState() {
     super.initState();
     _backgroundController = AnimationController(vsync: this, duration: const Duration(seconds: 10))..repeat();
-    _playRomanticMusic();
+    // _playRomanticMusic();
   }
 
-  Future<void> _playRomanticMusic() async {
-    try {
-      await _audioPlayer.setReleaseMode(ReleaseMode.loop);
-      // Use asset: assets/audio/romantic.mp3
-      await _audioPlayer.play(AssetSource('audio/romantic.mp3'));
-      await _audioPlayer.setVolume(0.5); 
-      setState(() => _isPlaying = true);
-    } catch (e) {
       debugPrint("Erro ao tocar audio: $e");
-    }
+    } */
   }
 
   Path drawHeart(Size size) {
@@ -79,7 +71,7 @@ class _QuestionPageState extends State<QuestionPage> with SingleTickerProviderSt
     });
     _confettiController.play();
     
-    // Tocar a música especial "Varinha de Condão"
+    /* // Tocar a música especial "Varinha de Condão"
     try {
       await _audioPlayer.stop(); // Para a música anterior
       // Tenta tocar. 
@@ -87,10 +79,10 @@ class _QuestionPageState extends State<QuestionPage> with SingleTickerProviderSt
       await _audioPlayer.setVolume(0.2); // Volume baixo como pedido
     } catch (e) {
       debugPrint("Erro ao tocar música final: $e");
-    }
+    } */
 
     // Wait a bit to appreciate, then navigate
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(milliseconds: 500));
     if (mounted) {
         // _audioPlayer.stop(); // REMOVIDO: A música continua tocando enquanto vai para a próxima tela
         Navigator.push(
