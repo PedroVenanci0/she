@@ -52,9 +52,7 @@ class _QuestionPageState extends State<QuestionPage> with SingleTickerProviderSt
     // _playRomanticMusic();
   }
 
-      debugPrint("Erro ao tocar audio: $e");
-    } */
-  }
+
 
   Path drawHeart(Size size) {
     final path = Path();

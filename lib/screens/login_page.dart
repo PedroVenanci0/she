@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
     String pass = _passwordController.text.trim().toLowerCase();
 
     // Validation (relaxed checking for nick)
-    if (nick.contains("ana") && nick.contains("leticia") && pass == "cuscuz") {
+    if (nick.contains("ana") && nick.contains("leticia") && pass == "meu cuscuz verdadeiro") {
         if (!mounted) return;
         Navigator.pushReplacement(
           context,
